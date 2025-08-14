@@ -1,110 +1,79 @@
-# 📚 Student Data Manager — Temporary Data
+# Student Data Manager — React App
 
-A small React application to **add, view, edit, delete, search, and sort student records**.  
-All data is stored only in React state (temporary) and will be lost on page refresh.
+A small React application to add, view, edit, delete, search, and sort student records.  
+Data is stored temporarily in React state (no backend). Optional use of `localStorage`.
 
 ---
 
-## 📌 Features
+## 🚀 Live Demo
+[Click here to view the live app](https://ak-jaat-007.github.io/student-data-manager/)
 
-### 1️⃣ Add / Edit Student
-- Fields:
-  - Roll Number (must be unique)
+## 📂 GitHub Repository
+[View on GitHub](https://github.com/ak-jaat-007/student-data-manager)
+
+---
+
+## 📋 Features
+- **Add Student Form**
+  - Roll Number (unique while app is open)
   - Name
   - Department (CSE, ECE, ME, CE, EE)
   - Year (1–4)
   - CGPA (0–10)
-- Validation:
-  - All fields required
-  - CGPA must be between 0 and 10
-  - Roll Number must be unique (except when editing)
+  - Validation: All fields required, CGPA range check, Roll number uniqueness
 
-### 2️⃣ Student Table
-- Columns: Roll, Name, Department, Year, CGPA, Actions
-- Edit: Loads selected student into the form
-- Delete: Removes student
+- **Student Table**
+  - Edit: Load selected student into form
+  - Delete: Remove student record
 
-### 3️⃣ Search & Sort
-- Search by Roll or Name (case-insensitive, accent-insensitive, typo-tolerant up to 1 edit)
-- Sort by:
-  - CGPA (ascending/descending)
-  - Name (A–Z / Z–A)
-- Filters:
-  - Department
-  - Year
-- All filters work together
+- **Search & Sort**
+  - Search by Roll or Name (case-insensitive, fuzzy search with 1 edit tolerance)
+  - Sort by CGPA or Name (ascending/descending)
+  - Filter by Department & Year
 
-### 4️⃣ Built-in Tests
-- `normalizeName(s)` → lowercase + remove accents
-- `isFuzzyMatch(a, b)` → allows 1 insertion, deletion, or replacement
-- "Tests" button runs checks and shows **All tests passed ✅** if correct
+- **Tests**
+  - Built-in small test suite with `normalizeName` and `isFuzzyMatch` validation
 
-### 5️⃣ Accessibility & UX
-- All inputs have labels
-- Buttons have clear text
-- Keyboard navigation works (Tab order correct)
+- **Accessibility**
+  - Labels for all inputs
+  - Clear button text
+  - Keyboard navigation support
 
 ---
 
-## 🛠 Tech Stack
-- **React** (Functional Components + Hooks)
-- **JavaScript (ES6+)**
-- **CSS** (basic styling)
+## 🛠️ Tech Stack
+- React (Functional Components + Hooks)
+- JavaScript
+- CSS
 
 ---
 
-## 📂 Folder Structure
+## 📦 Installation
+```bash
+# Clone the repository
+git clone https://github.com/ak-jaat-007/student-data-manager.git
 
-student-data-manager/
-├── src/
+# Navigate into the folder
+cd student-data-manager
 
-│ ├── App.js
+# Install dependencies
+npm install
 
-│ ├── App.css
-
-│ ├── index.js
-
-│ ├── components/
-
-
-│ │ ├── StudentForm.js
-
-│ │ ├── StudentTable.js
-
-│ │ ├── SearchSortFilters.js
-
-│ │ ├── Tests.js
-
-│ ├── utils/
-
-│ │ ├── fuzzySearch.js
-
-├── package.json
-
-└── ...
+# Start development server
+npm start
 
 
+🌐 Deployment
+This project is deployed using GitHub Pages.
+To deploy:
 
----
 
-## 🚀 Installation & Run
+npm run deploy
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ak-jaat-007/student-data-manager.git
-   
-2. Navigate to the project folder:
-   cd student-data-manager
-   
-3. Install dependencies:
-   npm install
+📄 License
+This project is for assignment/demo purposes.
 
-4. Start development server:
-    npm start
-5. Open in browser:
-    http://localhost:3000
 
-   
 📜 Notes
 Data is temporary — refreshing the page clears all students.
 
