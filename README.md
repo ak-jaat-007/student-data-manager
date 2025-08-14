@@ -54,19 +54,33 @@ All data is stored only in React state (temporary) and will be lost on page refr
 ---
 
 ## 📂 Folder Structure
+
 student-data-manager/
 ├── src/
+
 │ ├── App.js
+
 │ ├── App.css
+
 │ ├── index.js
+
 │ ├── components/
+
+
 │ │ ├── StudentForm.js
+
 │ │ ├── StudentTable.js
+
 │ │ ├── SearchSortFilters.js
+
 │ │ ├── Tests.js
+
 │ ├── utils/
+
 │ │ ├── fuzzySearch.js
+
 ├── package.json
+
 └── ...
 
 
@@ -97,7 +111,8 @@ Data is temporary — refreshing the page clears all students.
 Optional: You can enable localStorage to persist data if desired.
 
 👨‍💻 Author
-Aman Kumar
+Aman Kaliramna
+
 GitHub: ak-jaat-007
 
 
