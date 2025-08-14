@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# 📚 Student Data Manager — Temporary Data
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React application to **add, view, edit, delete, search, and sort student records**.  
+All data is stored only in React state (temporary) and will be lost on page refresh.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Features
 
-### `npm start`
+### 1️⃣ Add / Edit Student
+- Fields:
+  - Roll Number (must be unique)
+  - Name
+  - Department (CSE, ECE, ME, CE, EE)
+  - Year (1–4)
+  - CGPA (0–10)
+- Validation:
+  - All fields required
+  - CGPA must be between 0 and 10
+  - Roll Number must be unique (except when editing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2️⃣ Student Table
+- Columns: Roll, Name, Department, Year, CGPA, Actions
+- Edit: Loads selected student into the form
+- Delete: Removes student
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3️⃣ Search & Sort
+- Search by Roll or Name (case-insensitive, accent-insensitive, typo-tolerant up to 1 edit)
+- Sort by:
+  - CGPA (ascending/descending)
+  - Name (A–Z / Z–A)
+- Filters:
+  - Department
+  - Year
+- All filters work together
 
-### `npm test`
+### 4️⃣ Built-in Tests
+- `normalizeName(s)` → lowercase + remove accents
+- `isFuzzyMatch(a, b)` → allows 1 insertion, deletion, or replacement
+- "Tests" button runs checks and shows **All tests passed ✅** if correct
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5️⃣ Accessibility & UX
+- All inputs have labels
+- Buttons have clear text
+- Keyboard navigation works (Tab order correct)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tech Stack
+- **React** (Functional Components + Hooks)
+- **JavaScript (ES6+)**
+- **CSS** (basic styling)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure
+student-data-manager/
+├── src/
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ ├── components/
+│ │ ├── StudentForm.js
+│ │ ├── StudentTable.js
+│ │ ├── SearchSortFilters.js
+│ │ ├── Tests.js
+│ ├── utils/
+│ │ ├── fuzzySearch.js
+├── package.json
+└── ...
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Installation & Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ak-jaat-007/student-data-manager.git
+   
+2. Navigate to the project folder:
+   cd student-data-manager
+   
+3. Install dependencies:
+   npm install
 
-## Learn More
+4. Start development server:
+    npm start
+5. Open in browser:
+    http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   
+📜 Notes
+Data is temporary — refreshing the page clears all students.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Optional: You can enable localStorage to persist data if desired.
 
-### Code Splitting
+👨‍💻 Author
+Aman Kumar
+GitHub: ak-jaat-007
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
