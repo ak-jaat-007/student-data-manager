@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/student-data-manager/static/css/main.232bab0e.css",
+    "main.js": "/student-data-manager/static/js/main.697e74f7.js",
+    "index.html": "/student-data-manager/index.html",
+    "main.232bab0e.css.map": "/student-data-manager/static/css/main.232bab0e.css.map",
+    "main.697e74f7.js.map": "/student-data-manager/static/js/main.697e74f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.232bab0e.css",
+    "static/js/main.697e74f7.js"
+  ]
+}
